@@ -19,11 +19,12 @@
 
   "scripts": {
     "lint":       "eslint src",
-    "prebuild":   "eslint src",
     "build":      "rollup -c",
     "dev":        "rollup -c -w -m inline",
-    "prepublish": "npm run build",
-    "server":     "python -m SimpleHTTPServer 3000"
+    "prepublish": "npm run test",
+    "server":     "python -m SimpleHTTPServer 3000",
+    "pretest":    "npm run build",
+    "test":       "npm run lint && mocha test/index.js"
   },
 
   "keywords": [
