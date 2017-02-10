@@ -9,19 +9,13 @@
   <body>
     <script src="../dist/string-dom.js"></script>
     <script>
-      console.log('Module assigned to window.StringDom. Logged below:')
-      console.log(StringDom)
+      console.log('Module assigned to window.sd. Logged below:')
+      console.log(sd)
 
-      const {
-        div,
-        h1,
-        p
-      } = StringDom
-
-      const DOM = div({ class: 'wrapper' },
-        h1({ class: 'heading', 'data-heading': 'heading attr' }, 'Heading Text'),
-        p({ class: 'heading-sub', 'data-subheading': 'subheading attr' }, 'Subheading Text'),
-        'Just some text'
+      const DOM = sd('div', { class: 'wrapper' },
+        sd('h1', { class: 'heading', 'data-heading': 'data-heading' }, 'Heading Text'),
+        sd('p', { class: 'heading-sub', 'data-subheading': 'data-subheading' }, 'Subheading Text'),
+        sd('p', 'An element without attributes.')
       )
 
       document.body.innerHTML += DOM
