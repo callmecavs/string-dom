@@ -54,6 +54,7 @@ Both the above generate the following HTML (as a string), then add it to the `bo
 
 ## Prior Art
 
+* [ejsx](https://github.com/jxnblk/ejsx)
 * [hyperscript](https://github.com/hyperhype/hyperscript)
 * [vhtml](https://github.com/developit/vhtml)
 
