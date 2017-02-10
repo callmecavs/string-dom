@@ -36,18 +36,24 @@ describe('string-dom', () => {
   })
 
   it('should support stateless functional components', () => {
-    const Component = ({ name, style, text }) => (
-      <p class={ name } style={ style }>{ text }</p>
+    const Outer = ({ name, style, children }) => (
+      <div class={ name } style={ style }>
+        { children }
+      </div>
+    )
+
+    const Inner = ({ text }) => (
+      <p class="inner">{ text }</p>
     )
 
     const test = (
-      <Component
-        class="paragraph"
-        style="background-color: black;"
-        text="A stateless, functional component."
-      />
+      <Outer
+        class="outer"
+        style="cursor: pointer;">
+        <Inner text="A nested child component."/>
+      </Outer>
     )
 
-    expect(test).to.equal('<p class="paragraph" style="background-color: black;">A stateless, functional component.</p>')
+    expect(test).to.equal('<div class="outer" style="cursor: pointer;"><p class="inner">A nested child component.</p></div>')
   })
 })
