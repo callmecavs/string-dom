@@ -85,7 +85,7 @@ describe('string-dom', () => {
     expect(test).to.equal(result)
   })
 
-  it('should throw an error for event handler props', () => {
+  it('should throw an error for event binding props', () => {
     const test = () => (
       <p onClick={ () => {} }/>
     )
