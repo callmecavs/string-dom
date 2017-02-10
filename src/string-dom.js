@@ -1,3 +1,5 @@
+import empty from './empty.js'
+
 // the element creator function
 // accepts a tag name, then (optionally) an attributes object, then children
 const element = (tag, ...rest) => {
