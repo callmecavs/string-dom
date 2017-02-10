@@ -19,6 +19,7 @@
 
   "scripts": {
     "lint":       "eslint src",
+    "prebuild":   "rm -rf dist",
     "build":      "rollup -c",
     "dev":        "rollup -c -w -m inline",
     "prepublish": "npm run test",
