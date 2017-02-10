@@ -36,6 +36,10 @@ Adds the following HTML to the `body`:
 </div>
 ```
 
+## Linting
+
+[![JS Standard Style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](http://standardjs.com)
+
 ## License
 
 [MIT](https://opensource.org/licenses/MIT). © 2017 Michael Cavalea
