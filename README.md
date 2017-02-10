@@ -20,7 +20,8 @@ import sd from 'string-dom'
 /** @jsx sd */
 
 // with JSX
-// note the comment above, and see here: https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-react-jsx#custom
+// note the comment above, and see the link below
+// https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-react-jsx#custom
 document.body.innerHTML += (
   <div class="wrapper">
     <h1 class="heading" data-heading="data-heading">Heading Text</h1>
