@@ -19,12 +19,12 @@
       } = StringDom
 
       const DOM = div({ class: 'wrapper' },
-        h1({ class: 'heading' }, 'Heading Text'),
-        p({ class: 'heading-sub' }, 'Subheading Text'),
+        h1({ class: 'heading', 'data-heading': 'heading attr' }, 'Heading Text'),
+        p({ class: 'heading-sub', 'data-subheading': 'subheading attr' }, 'Subheading Text'),
         'Just some text'
       )
 
-      console.log(DOM)
+      document.body.innerHTML += DOM
     </script>
   </body>
 </html>
