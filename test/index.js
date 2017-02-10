@@ -8,23 +8,23 @@ const sd = require('../dist/string-dom.js')
 /* eslint-env mocha */
 /** @jsx sd */
 
-const RESULT = [
-  '<div class="wrapper">',
-    '<h1 class="heading" data-heading="data-heading">Heading Text</h1>',
-    '<p class="heading-sub" data-subheading="data-subheading">Subheading Text</p>',
-    '<p>An element without attributes.</p>',
-  '</div>'
-].join('')
-
 describe('string-dom', () => {
-  it('should build an html string', () => {
+  it('should create HTML strings', () => {
     const test = sd('div', { class: 'wrapper' },
       sd('h1', { class: 'heading', 'data-heading': 'data-heading' }, 'Heading Text'),
       sd('p', { class: 'heading-sub', 'data-subheading': 'data-subheading' }, 'Subheading Text'),
       sd('p', 'An element without attributes.')
     )
 
-    expect(test).to.equal(RESULT)
+    const result = [
+      '<div class="wrapper">',
+        '<h1 class="heading" data-heading="data-heading">Heading Text</h1>',
+        '<p class="heading-sub" data-subheading="data-subheading">Subheading Text</p>',
+        '<p>An element without attributes.</p>',
+      '</div>'
+    ].join('')
+
+    expect(test).to.equal(result)
   })
 
   it('should support JSX', () => {
@@ -36,10 +36,18 @@ describe('string-dom', () => {
       </div>
     )
 
-    expect(test).to.equal(RESULT)
+    const result = [
+      '<div class="wrapper">',
+        '<h1 class="heading" data-heading="data-heading">Heading Text</h1>',
+        '<p class="heading-sub" data-subheading="data-subheading">Subheading Text</p>',
+        '<p>An element without attributes.</p>',
+      '</div>'
+    ].join('')
+
+    expect(test).to.equal(result)
   })
 
-  it('should support stateless functional components', () => {
+  it('should support nested, stateless, functional components', () => {
     const Outer = ({ name, style, children }) => (
       <div class={ name } style={ style }>
         { children }
@@ -58,7 +66,13 @@ describe('string-dom', () => {
       </Outer>
     )
 
-    expect(test).to.equal('<div class="outer" style="cursor: pointer;"><p class="inner">A nested child component.</p></div>')
+    const result = [
+      '<div class="outer" style="cursor: pointer;">',
+        '<p class="inner">A nested child component.</p>',
+      '</div>'
+    ].join('')
+
+    expect(test).to.equal(result)
   })
 
   it('should throw an error for event handler props', () => {
