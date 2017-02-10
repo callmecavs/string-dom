@@ -1,6 +1,6 @@
 {
   "name":        "string-dom",
-  "description": "",
+  "description": "Create HTML strings using functions.",
 
   "main":        "dist/string-dom.js",
   "module":      "dist/string-dom.module.js",
@@ -27,7 +27,8 @@
   },
 
   "keywords": [
-
+    "string",
+    "dom"
   ],
 
   "devDependencies": {
