@@ -21,12 +21,12 @@ const element = (tag, ...rest) => {
   const secondArg = rest[0]
 
   // check for attributes
-  // children are processed based on their presence
+  // if attributes exist, remove before joining children
   if (secondArg !== null && typeof secondArg === 'object') {
     attrs = Object
       .keys(secondArg)
       .reduce((accum, attr) => {
-        // if event, throw
+        // if event, throw, because no DOM
         if (attr.indexOf('on') === 0) {
           throw new Error('string-dom: event binding is not supported.')
         }
@@ -36,7 +36,6 @@ const element = (tag, ...rest) => {
         return accum
       }, '')
 
-    // remove attributes object before joining children
     children = rest.slice(1).join('')
   } else {
     attrs = ''
