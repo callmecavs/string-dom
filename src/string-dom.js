@@ -4,7 +4,7 @@ const element = (tag, ...rest) => {
   const secondArg = rest[0]
 
   // catch elements without attributes
-  if (typeof secondArg !== 'object') {
+  if (typeof secondArg !== 'object' || secondArg === null) {
     return `<${tag}>${rest.join('')}</${tag}>`
   }
 
