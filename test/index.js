@@ -23,7 +23,7 @@ describe('string-dom', () => {
     expect(test).to.equal(RESULT)
   })
 
-  it('should transpile JSX', () => {
+  it('should support JSX', () => {
     const test = (
       <div class="wrapper">
         <h1 class="heading" data-heading="data-heading">Heading Text</h1>
