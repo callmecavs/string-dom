@@ -13,7 +13,7 @@ const config = {
     {
       dest: info.main,
       format: 'umd',
-      moduleName: 'StringDom'
+      moduleName: 'sd'
     }, {
       dest: info.module,
       format: 'es'
