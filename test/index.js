@@ -75,6 +75,20 @@ describe('string-dom', () => {
     expect(test).to.equal(result)
   })
 
+  it('should support self-closing, empty tags', () => {
+    const Image = ({ source }) => (
+      <img class="image" src={ source }/>
+    )
+
+    const test = (
+      <Image source="path/to/image.jpg"/>
+    )
+
+    const result = '<img class="image" src="path/to/image.jpg">'
+
+    expect(test).to.equal(result)
+  })
+
   it('should throw an error for event handler props', () => {
     const test = () => (
       <p onClick={ () => {} }/>
