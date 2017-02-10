@@ -2,6 +2,15 @@ const expect = require('chai').expect
 const sd = require('../dist/string-dom.js')
 
 /* eslint-env mocha */
+/** @jsx sd */
+
+const RESULT = [
+  '<div class="wrapper">',
+    '<h1 class="heading" data-heading="data-heading">Heading Text</h1>',
+    '<p class="heading-sub" data-subheading="data-subheading">Subheading Text</p>',
+    '<p>An element without attributes.</p>',
+  '</div>'
+].join('')
 
 describe('string-dom', () => {
   it('should build an html string', () => {
@@ -11,8 +20,18 @@ describe('string-dom', () => {
       sd('p', 'An element without attributes.')
     )
 
-    expect(test)
-      .to
-      .equal('<div class="wrapper"><h1 class="heading" data-heading="data-heading">Heading Text</h1><p class="heading-sub" data-subheading="data-subheading">Subheading Text</p><p>An element without attributes.</p></div>')
+    expect(test).to.equal(RESULT)
+  })
+
+  it('should transpile JSX', () => {
+    const test = (
+      <div class="wrapper">
+        <h1 class="heading" data-heading="data-heading">Heading Text</h1>
+        <p class="heading-sub" data-subheading="data-subheading">Subheading Text</p>
+        <p>An element without attributes.</p>
+      </div>
+    )
+
+    expect(test).to.equal(RESULT)
   })
 })

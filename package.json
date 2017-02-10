@@ -25,7 +25,7 @@
     "prepublish": "npm run test",
     "server":     "python -m SimpleHTTPServer 3000",
     "pretest":    "npm run build",
-    "test":       "npm run lint && mocha test/index.js"
+    "test":       "npm run lint && mocha --compilers js:babel-register"
   },
 
   "keywords": [
@@ -34,10 +34,13 @@
   ],
 
   "devDependencies": {
+    "babel-core": "^6.22.1",
     "babel-eslint": "^7.1.1",
     "babel-plugin-external-helpers": "^6.18.0",
+    "babel-plugin-transform-react-jsx": "^6.22.0",
     "babel-preset-es2015-rollup": "^3.0.0",
     "babel-preset-stage-0": "^6.16.0",
+    "babel-register": "^6.22.0",
     "chai": "^3.5.0",
     "eslint": "^3.13.0",
     "eslint-config-standard": "^6.2.1",
