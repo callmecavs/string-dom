@@ -52,6 +52,11 @@ Both the above generate the following HTML (as a string), then add it to the `bo
 </div>
 ```
 
+## Prior Art
+
+* [hyperscript](https://github.com/hyperhype/hyperscript)
+* [vhtml](https://github.com/developit/vhtml)
+
 ## Linting
 
 [![JS Standard Style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](http://standardjs.com)
