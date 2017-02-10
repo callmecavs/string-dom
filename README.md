@@ -10,9 +10,11 @@ Create HTML strings using JSX (or functions).
 $ npm i string-dom --save
 ```
 
-## Usage
+## About
 
-`string-dom` is a function that builds an HTML string. Its API is similar to [`hyperscript`](https://github.com/hyperhype/hyperscript). More about similarities and differences to come.
+`string-dom` is a function that creates an HTML string. It is meant to work with JSX, but _does not_ create DOM (regular or virtual). It effectively turns JSX into an HTML templating language that can be used separately of React.
+
+## Usage
 
 ```jsx
 import sd from 'string-dom'
