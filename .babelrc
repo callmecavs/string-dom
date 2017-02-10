@@ -1,6 +1,5 @@
 {
-  "presets": [
-    "es2015-rollup",
-    "stage-0"
+  "plugins": [
+    "transform-react-jsx"
   ]
 }

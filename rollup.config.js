@@ -7,7 +7,13 @@ const config = {
   entry: 'src/string-dom.js',
   plugins: [
     resolve(),
-    babel()
+    babel({
+      babelrc: false,
+      presets: [
+        "es2015-rollup",
+        "stage-0"
+      ]
+    })
   ],
   targets: [
     {
