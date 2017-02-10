@@ -34,4 +34,20 @@ describe('string-dom', () => {
 
     expect(test).to.equal(RESULT)
   })
+
+  it('should support stateless functional components', () => {
+    const Component = ({ name, style, text }) => (
+      <p class={ name } style={ style }>{ text }</p>
+    )
+
+    const test = (
+      <Component
+        class="paragraph"
+        style="background-color: black;"
+        text="A stateless, functional component."
+      />
+    )
+
+    expect(test).to.equal('<p class="paragraph" style="background-color: black;">A stateless, functional component.</p>')
+  })
 })
