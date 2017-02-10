@@ -14,9 +14,22 @@ $ npm i string-dom --save
 
 `string-dom` is a function that builds an HTML string. Its API is similar to [`hyperscript`](https://github.com/hyperhype/hyperscript). More about similarities and differences to come.
 
-```javascript
+```jsx
 import sd from 'string-dom'
 
+/** @jsx sd */
+
+// with JSX
+// note the comment above, and see here: https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-react-jsx#custom
+document.body.innerHTML += (
+  <div class="wrapper">
+    <h1 class="heading" data-heading="data-heading">Heading Text</h1>
+    <p class="heading-sub" data-subheading="data-subheading">Subheading Text</p>
+    <p>An element without attributes.</p>
+  </div>
+)
+
+// without JSX
 document.body.innerHTML += (
   sd('div', { class: 'wrapper' },
     sd('h1', { class: 'heading', 'data-heading': 'data-heading' }, 'Heading Text'),
@@ -26,7 +39,7 @@ document.body.innerHTML += (
 )
 ```
 
-Adds the following HTML to the `body`:
+Both the above generate the following HTML (as a string), then add it to the `body`:
 
 ```html
 <div class="wrapper">
