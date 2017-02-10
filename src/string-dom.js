@@ -1,10 +1,10 @@
 // the element creator function
-// accepts a tag name, then (optionally) an attiributes object, then children
+// accepts a tag name, then (optionally) an attributes object, then children
 const element = (tag, ...rest) => {
   const secondArg = rest[0]
 
-  // catch elements without attributes
-  // JSX passes null instead, normal use passes a string instead
+  // check for elements without attributes
+  // the second parameter will be null (with JSX) or a string (without JSX)
   if (secondArg === null || typeof secondArg !== 'object') {
     return `<${tag}>${rest.join('')}</${tag}>`
   }
@@ -22,7 +22,6 @@ const element = (tag, ...rest) => {
     .slice(1)
 
   // concatentate the children
-  // nested function calls return strings, and unwrapped text is a string too
   const concatted = rest
     .slice(1)
     .join('')
