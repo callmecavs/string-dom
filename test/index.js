@@ -1,6 +1,9 @@
 const expect = require('chai').expect
 const sd = require('../dist/string-dom.js')
 
+// TODO: cleanup
+// TODO: add test for elements without attributes
+
 /* eslint-env mocha */
 /** @jsx sd */
 
