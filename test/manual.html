@@ -11,6 +11,20 @@
     <script>
       console.log('Module assigned to window.StringDom. Logged below:')
       console.log(StringDom)
+
+      const {
+        div,
+        h1,
+        p
+      } = StringDom
+
+      const DOM = div({ class: 'wrapper' },
+        h1({ class: 'heading' }, 'Heading Text'),
+        p({ class: 'heading-sub' }, 'Subheading Text'),
+        'Just some text'
+      )
+
+      console.log(DOM)
     </script>
   </body>
 </html>
