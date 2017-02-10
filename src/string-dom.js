@@ -4,7 +4,8 @@ const element = (tag, ...rest) => {
   const secondArg = rest[0]
 
   // catch elements without attributes
-  if (typeof secondArg !== 'object' || secondArg === null) {
+  // JSX passes null instead, normal use passes a string instead
+  if (secondArg === null || typeof secondArg !== 'object') {
     return `<${tag}>${rest.join('')}</${tag}>`
   }
 
@@ -18,7 +19,7 @@ const element = (tag, ...rest) => {
     .slice(1)
 
   // concatentate the children
-  // nested function calls return Strings, and unwrapped text is a String too
+  // nested function calls return strings, and unwrapped text is a string too
   const concatted = rest
     .slice(1)
     .join('')
