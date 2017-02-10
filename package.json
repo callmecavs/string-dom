@@ -6,7 +6,7 @@
   "module":      "dist/string-dom.module.js",
   "jsnext:main": "dist/string-dom.module.js",
 
-  "version": "0.0.5",
+  "version": "0.0.6",
   "license": "MIT",
 
   "repository": "callmecavs/string-dom",
