@@ -1,0 +1,47 @@
+{
+  "name":        "string-dom",
+  "description": "",
+
+  "main":        "dist/string-dom.js",
+  "module":      "dist/string-dom.module.js",
+  "jsnext:main": "dist/string-dom.module.js",
+
+  "version": "0.0.1",
+  "license": "MIT",
+
+  "repository": "callmecavs/string-dom",
+
+  "author": {
+    "name":  "Michael Cavalea",
+    "email": "callmecavs@gmail.com",
+    "url":   "http://callmecavs.com/"
+  },
+
+  "scripts": {
+    "lint":       "eslint src",
+    "prebuild":   "eslint src",
+    "build":      "rollup -c",
+    "dev":        "rollup -c -w -m inline",
+    "prepublish": "npm run build",
+    "server":     "python -m SimpleHTTPServer 3000"
+  },
+
+  "keywords": [
+
+  ],
+
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-external-helpers": "^6.18.0",
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "eslint": "^3.13.0",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1",
+    "rollup": "^0.41.1",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-watch": "^3.2.2"
+  }
+}
