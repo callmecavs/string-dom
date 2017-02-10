@@ -48,7 +48,7 @@ describe('string-dom', () => {
 
     const test = (
       <Outer
-        class="outer"
+        name="outer"
         style="cursor: pointer;">
         <Inner text="A nested child component."/>
       </Outer>
