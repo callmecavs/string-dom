@@ -13,6 +13,9 @@ const element = (tag, ...rest) => {
   const formatted = Object
     .keys(secondArg)
     .reduce((accum, current) => {
+      // TODO: throw for events added by JSX
+      // if (current.indexOf('on') === 0)
+
       accum += ` ${current}="${secondArg[current]}"`
       return accum
     }, '')
