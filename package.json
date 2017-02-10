@@ -1,6 +1,6 @@
 {
   "name":        "string-dom",
-  "description": "Create HTML strings using functions.",
+  "description": "Create HTML strings using JSX (or functions).",
 
   "main":        "dist/string-dom.js",
   "module":      "dist/string-dom.module.js",
