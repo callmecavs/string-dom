@@ -56,4 +56,12 @@ describe('string-dom', () => {
 
     expect(test).to.equal('<div class="outer" style="cursor: pointer;"><p class="inner">A nested child component.</p></div>')
   })
+
+  it('should throw an error for event handler props', () => {
+    const test = () => (
+      <p onClick={ () => {} }/>
+    )
+
+    expect(test).to.throw(Error)
+  })
 })
