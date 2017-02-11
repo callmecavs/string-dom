@@ -6,7 +6,10 @@ Create HTML strings using JSX (or functions).
 
 ## About
 
-`string-dom` is a function that creates an HTML string. It is made to work with JSX, but **renders it to a string, instead of to DOM**. With `string-dom`, JSX becomes an HTML templating language that can be used separately of React.
+`string-dom` is a function that creates an HTML string.
+
+* It is made to work with JSX, but **renders it to a string, instead of to DOM**.
+* With `string-dom`, JSX becomes an HTML templating language that can be used separately of React.
 
 ## Install
 
